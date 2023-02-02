@@ -1,0 +1,9 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  VolodymyrKlymniuk\ThriftIntegrationBundle\Serializer\Normalizer\ThriftNormalizer:
+    arguments:
+      $nameConverter: '@serializer.name_converter.camel_case_to_snake_case'
